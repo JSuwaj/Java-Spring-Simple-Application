@@ -1,0 +1,94 @@
+#GET http://localhost:8084/api/artGalleries
+#
+#GET http://localhost:8084/api/artGalleries/Szkolna 17
+
+GET http://localhost:8084/api/artGalleries/Szkolna 17/paintings
+
+GET http://localhost:8084/api/artGalleries/Szkolna 17/paintings/Claude Monet/Plaża w Pourville
+
+GET http://localhost:8084/api/artGalleries/Szkolna 17/paintings/Salvador Dalí/Trwałość pamięci
+
+GET http://localhost:8084/api/paintings
+
+GET http://localhost:8084/api/paintings/Salvador Dalí/Trwałość pamięci
+
+POST http://localhost:8084/api/artGalleries
+Content-Type: application/json
+
+{
+  "adress": "Kolorowa 22",
+  "openingHour": 5,
+  "closingHour": 15
+}
+
+POST http://localhost:8084/api/paintings
+Content-Type: application/json
+
+{
+  "name": "Obraz",
+  "artist": "Artysta",
+  "year": 1877,
+  "medium": "oil",
+  "art_gallery": {"adress":"Kolorowa 22"}
+}
+
+PUT http://localhost:8084/api/paintings/Artysta/Obraz
+Content-Type: application/json
+
+{
+  "year": 1888,
+  "medium": "akryl",
+  "art_gallery": {"adress":"Kolorowa 22"}
+}
+
+PUT http://localhost:8084/api/paintings/Artysta/Obrazek
+Content-Type: application/json
+
+{
+  "year": 1888,
+  "medium": "akryl",
+  "art_gallery": {"adress":"Kolorowa 22"}
+}
+
+PUT http://localhost:8084/api/artGalleries/Kolorowa 22
+Content-Type: application/json
+
+{
+  "openingHour": 4,
+  "closingHour": 14
+}
+
+PUT http://localhost:8084/api/artGalleries/Dworcowa 54
+Content-Type: application/json
+
+{
+  "openingHour": 1,
+  "closingHour": 2
+}
+
+DELETE http://localhost:8084/api/artGalleries/Szkolna 17
+
+DELETE http://localhost:8084/api/paintings/Salvador Dalí/Trwałość pamięci
+
+
+
+POST http://localhost:8084/api/artGalleries/Kolorowa 22/paintings
+Content-Type: application/json
+
+{
+  "name": "Obrazek",
+  "artist": "Artystkaa",
+  "year": 1222,
+  "medium": "olej"
+}
+
+PUT http://localhost:8084/api/artGalleries/Kolorowa 22/paintings/Artystkaa/Obrazek
+Content-Type: application/json
+
+{
+"year": 1333,
+"medium": "akryl"
+}
+
+DELETE http://localhost:8084/api/artGalleries/Kolorowa 22/paintings/Artystkaa/Obrazek
+

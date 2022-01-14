@@ -1,0 +1,36 @@
+#GET http://localhost:8083/api/artGalleries
+
+#GET http://localhost:8083/api/artGalleries/Szkolna 17
+
+#GET http://localhost:8083/api/artGalleries/Szkolna 17/paintings
+
+#GET http://localhost:8083/api/artGalleries/Szkolna 17/paintings/Claude Monet/Plaża w Pourville
+
+#GET http://localhost:8083/api/artGalleries/Szkolna 17/paintings/Salvador Dalí/Trwałość pamięci
+#
+#POST http://localhost:8083/api/artGalleries
+#Content-Type: application/json
+#
+#{
+#  "adress": "Kolorowa 22",
+#  "openingHour": 5,
+#  "closingHour": 15
+#}
+
+#PUT http://localhost:8083/api/artGalleries/Kolorowa 22
+#Content-Type: application/json
+#
+#{
+#  "openingHour": 4,
+#  "closingHour": 14
+#}
+
+#PUT http://localhost:8083/api/artGalleries/Dworcowa 54
+#Content-Type: application/json
+#
+#{
+#  "openingHour": 1,
+#  "closingHour": 2
+#}
+
+DELETE http://localhost:8083/api/artGalleries/Szkolna 17
